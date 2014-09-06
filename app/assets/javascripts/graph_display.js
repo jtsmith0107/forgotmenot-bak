@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	
+	
 	var ctx = document.getElementById("graphCanvas").getContext('2d');
 	
 	var data = {
