@@ -1,9 +1,19 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  email           :string(255)      not null
+#  password_digest :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  session_token   :string(255)
+#
+
 class User < ActiveRecord::Base
   validates :email, :session_token, presence: true
 
-  has_many :boards
-  has_many :card_assignments
-  has_many :board_memberships
+  has_many :devices
 
   attr_reader :password
   after_initialize :ensure_session_token
