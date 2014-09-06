@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
+gem 'chart-js-rails'
 
 group :doc do
   gem 'sdoc', require: false

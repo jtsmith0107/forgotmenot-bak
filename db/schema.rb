@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140906192941) do
+ActiveRecord::Schema.define(version: 20140906200926) do
 
   create_table "data_points", force: true do |t|
     t.integer  "device_id"
     t.integer  "watts"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "sample_time"
   end
 
   add_index "data_points", ["device_id"], name: "index_data_points_on_device_id"
